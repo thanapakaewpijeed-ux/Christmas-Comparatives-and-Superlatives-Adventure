@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Christmas Comparatives and Superlatives Adventure</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--card:#fffdf8;--ink:#2a1f1f;--mut:#6a5d5d;--red:#c62828;--grn:#1b7a4b;--gold:#f5b700;--ice:#d6effa;--line:#eadfd0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--card:#2a2422;--ink:#f7efe6;--mut:#c9bcae;--ice:#24424f;--line:#4a3f3a}}
+:root[data-theme="dark"]{--card:#2a2422;--ink:#f7efe6;--mut:#c9bcae;--ice:#24424f;--line:#4a3f3a}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:Fredoka,"Trebuchet MS",Arial,sans-serif;color:var(--ink);background:linear-gradient(#0f3d2e,#1c6b4f);min-height:100vh}
+button{touch-action:manipulation;-webkit-tap-highlight-color:transparent;font:inherit}
+.sn{position:fixed;top:-30px;color:#fff;opacity:.85;pointer-events:none;z-index:1;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh) rotate(180deg)}}
+.sc{position:relative;height:110px;overflow:hidden}.sc span{position:absolute;line-height:1}
+.sl{bottom:16px;font-size:36px;animation:run 12s linear infinite}.tr{bottom:4px;font-size:44px;animation:blink 1.4s infinite}.t1{left:8%}.t2{right:8%;animation-delay:.7s}.sm{bottom:4px;left:46%;font-size:40px}
+@keyframes run{from{left:-30%}to{left:110%}}@keyframes blink{50%{filter:brightness(1.5) drop-shadow(0 0 8px #ffd54f)}}
+@media (prefers-reduced-motion:reduce){.sc span,.sn{animation:none!important}}
+main{position:relative;z-index:2;max-width:680px;margin:0 auto;padding:0 12px 28px}
+.panel{background:var(--card);border:4px solid var(--gold);border-radius:22px;padding:18px;box-shadow:0 6px 0 #8a1c1c}
+h1{font-size:clamp(24px,5.5vw,32px);margin:0 0 6px;line-height:1.15;color:var(--red)}h2{margin:0 0 6px}p{margin:0 0 12px;color:var(--mut);line-height:1.45}
+.center{text-align:center}.big{font-size:60px;text-align:center}.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:8px 0}
+.top{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px;font-weight:600;flex-wrap:wrap}
+.bar{height:10px;border-radius:6px;background:var(--line);overflow:hidden;margin-bottom:10px}.bar i{display:block;height:100%;background:var(--grn)}
+.tm{position:relative;height:22px;border-radius:11px;background:var(--line);overflow:hidden;margin-bottom:12px}.tm i{display:block;height:100%;width:100%;background:var(--gold)}.tm i.low{background:var(--red)}.tm b{position:absolute;top:0;left:0;right:0;text-align:center;font-size:14px;line-height:22px}
+.btn{font-weight:700;font-size:18px;background:var(--red);color:#fff;border:0;border-radius:14px;padding:12px 22px;min-height:46px;cursor:pointer;box-shadow:0 4px 0 #7a1515}.btn.alt{background:var(--grn);box-shadow:0 4px 0 #0f4a2d}.btn:disabled{opacity:.6}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:4px solid #1e88e5;outline-offset:2px}
+.pic{background:var(--ice);border-radius:16px;padding:10px;margin-bottom:12px;text-align:center;overflow-wrap:anywhere}.sp{display:flex;justify-content:center;align-items:flex-end;gap:18px}.it{display:flex;flex-direction:column;align-items:center}.it b{font-size:14px}.st{font-size:19px;font-weight:600}
+.q{font-size:20px;font-weight:600;margin-bottom:12px;line-height:1.35}.q.pop{animation:pop .5s}@keyframes pop{50%{transform:scale(1.06)}}
+.opt{display:block;width:100%;text-align:left;font-size:18px;color:var(--ink);background:var(--card);border:3px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px;min-height:46px;cursor:pointer}
+.opt.ok,.chip.ok{border-color:var(--grn);background:#d8f3de;color:#14391f}.opt.bad{border-color:var(--red);background:#fbdcda;color:#4a1513}
+.chips{display:flex;flex-wrap:wrap;gap:8px;min-height:52px;padding:8px;border-radius:14px}.ans{background:var(--ice);margin-bottom:10px}
+.chip{font-size:18px;font-weight:600;background:var(--card);color:var(--ink);border:3px solid var(--line);border-radius:12px;padding:8px 12px;min-height:44px;cursor:pointer}.chip.sel{border-color:var(--gold);background:#fff0c2;color:#2a1f1f}
+.mt{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mt div{display:flex;flex-direction:column;gap:8px}.mt .chip{text-align:left}
+.ti{width:100%;font-size:20px;padding:12px;border-radius:14px;border:3px solid var(--line);background:var(--card);color:var(--ink);margin-bottom:10px}.ti.sm{width:auto;flex:1;min-width:120px;font-size:16px;padding:8px;margin:0}.er{color:var(--red);min-height:20px;margin:0}
+.fb{margin-top:10px;padding:12px 14px;border-radius:14px;line-height:1.4}.fb.ok{background:#d8f3de;color:#14391f}.fb.bad{background:#fbdcda;color:#4a1513}.fb button{display:block;margin-top:10px}
+.lv{display:flex;gap:12px;align-items:center;width:100%;text-align:left;color:var(--ink);background:var(--card);border:3px solid var(--line);border-radius:16px;padding:12px;margin-bottom:10px;cursor:pointer}.lv:disabled{opacity:.55;cursor:not-allowed}.lv .ic{font-size:34px}.lv b{display:block;font-size:18px}.lv small{color:var(--mut);font-size:14px}.lv .st{margin-left:auto;font-size:16px;white-space:nowrap}
+.sum{background:var(--ice);border-radius:16px;padding:10px 14px;margin:8px 0 12px}.sum div{display:flex;justify-content:space-between;gap:10px;padding:4px 0}.sum small{color:var(--mut)}
+.dash{overflow-x:auto;margin-bottom:10px}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border:2px solid var(--line);padding:5px 7px;text-align:center;white-space:nowrap}td:nth-child(2),th:nth-child(2){text-align:left}th{background:var(--ice)}tr[data-k]{cursor:pointer}
+.ctl{position:fixed;top:calc(env(safe-area-inset-top,0px) + 6px);right:8px;z-index:20;display:flex;gap:6px;align-items:center;background:rgba(0,0,0,.45);padding:4px 8px;border-radius:24px}.ctl button{font-size:20px;background:none;border:0;cursor:pointer;min-width:36px;min-height:36px}.ctl input{width:70px}
+.bs{position:fixed;top:60vh;font-size:28px;pointer-events:none;z-index:30;animation:up 1.2s ease-out forwards}@keyframes up{to{transform:translateY(-45vh) rotate(40deg);opacity:0}}
+@media (max-width:480px){.panel{padding:12px}.sc{height:84px}.q{font-size:18px}.opt{font-size:17px}.sl{font-size:28px}}
+@media print{.ctl,.sc,.sn,.row,.top button{display:none!important}body{background:#fff}}
+</style>
+</head>
+<body>
+<div class="ctl"><button id="bm" aria-label="Music on or off">🎵</button><button id="bs" aria-label="Sound effects on or off">🔊</button><input type="range" id="bv" min="0" max="100" value="60" aria-label="Volume"></div>
+<div class="sc" aria-hidden="true"><span class="sl">🛷🦌🦌</span><span class="tr t1">🎄</span><span class="tr t2">🎄</span><span class="sm">⛄</span></div>
+<main><div class="panel" id="app"></div></main>
+<script>
+const $=s=>document.querySelector(s),app=$("#app"),shuf=a=>a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(x=>x[1]),pick=a=>a[Math.floor(Math.random()*a.length)];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const NAMES=["Christmas Wonderland","Elf’s Gift Workshop","Reindeer Racing Challenge","Santa’s Final Challenge"],SUB=["Explore and Compare!","Build the Perfect Adjectives!","Race, Match and Build!","Become the Christmas Grammar Master!"],ICO=["🎄","🧝","🦌","🎅"];
+const KN={m:"Multiple Choice",t:"True or False",p:"Picture Comparison",x:"Matching",f:"Fill in the Blanks",u:"Unscramble Sentences",b:"Sentence Building",e:"Error Correction"};
+const OKS=["Excellent!","Fantastic!","You’re Amazing!","Great Job!"],BADS=["Nice Try!","Keep Going!","You Can Do It!","Don’t Give Up!"];
+/* ---------- QUESTION DATA (first option of each choice question is the correct one) ---------- */
+const SP=(e,z,n)=>`<div class="sp">${z.map((s,i)=>`<span class="it"><span style="font-size:${s}px">${e}</span><b>${n[i]}</b></span>`).join("")}</div>`,tb=t=>`<div class="st">${t}</div>`;
+const A=(k,p,q,e,...o)=>({k,p,q,e,o}),T=(s,a,e)=>({k:"t",p:tb(s),q:"True or False?",e,o:a?["True","False"]:["False","True"],fx:1});
+const X=(q,e,...p)=>({k:"x",q,e,m:p.map(x=>x.split("|"))}),F=(q,a,e)=>({k:"f",q,a,e,p:""});
+const U=(k,p,s,e,...d)=>({k,p,q:k==="b"?"Build the sentence with the tiles.":"Put the words in order.",s,e,d});
+const STAGES=[[
+A("m",SP("🎄",[44,74],["green tree","red tree"]),"The red tree is ____ than the green tree.","Compare two things: adjective + -er + than.","taller","tallest","more tall","the taller"),
+A("m",SP("🎁",[34,54,78],["A","B","C"]),"Which sentence describes gift C?","Three or more things: the + adjective + -est.","Gift C is the biggest gift.","Gift C is bigger gift.","Gift C is more big than gift A.","Gift C is the bigger gift."),
+A("m","","Which sentence compares only TWO things?","Comparative + than compares two things.","Rudolph is faster than Dasher.","Rudolph is the fastest reindeer.","Rudolph is the fastest of all.","Rudolph is the fastest in the team."),
+A("m","","Which sentence compares THREE or more things?","Superlatives with the compare three or more things.","This is the most beautiful tree in the village.","This tree is more beautiful than that tree.","This tree is as beautiful as that tree.","This tree is more beautiful than mine."),
+A("m","","Choose the correct sentence.","Short adjectives take -er: short → shorter.","The elf is shorter than Santa.","The elf is shortest than Santa.","The elf is more short than Santa.","The elf is the shorter than Santa."),
+T("A reindeer is faster than a turtle.",1,"Fast → faster than. A reindeer runs faster than a turtle."),
+T("Santa’s sleigh is more fast than a bicycle.",0,"Fast is short, so we say faster, not more fast."),
+T("This gift is the most heavy of the three.",0,"Heavy ends in y: heavy → heavier → the heaviest."),
+A("p",SP("⛄",[42,62,86],["Tom","Sam","Ben"]),"Who is the tallest snowman?","Ben is bigger than the others, so he is the tallest.","Ben","Sam","Tom","Tom and Sam"),
+A("p",SP("🎁",[84,54],["Gift X","Gift Y"]),"Gift X is ____ than gift Y.","Two things: big → bigger than.","bigger","biggest","more big","big"),
+A("p",SP("🧦",[36,60,86],["A","B","C"]),"Which sentence is correct?","Of three socks, sock A is the smallest.","Sock A is the smallest.","Sock A is smaller sock.","Sock A is the most small.","Sock A is smallest than sock C."),
+X("Match each adjective with its comparative.","Add -er; big doubles the g; happy changes y to i; large adds only r.","tall|taller","big|bigger","happy|happier","large|larger"),
+X("Match each adjective with its superlative.","Use the + -est, and follow the spelling rules.","tall|the tallest","big|the biggest","large|the largest","fast|the fastest"),
+F("A reindeer is faster ____ a turtle.","than","Use than after a comparative."),
+F("Rudolph is ____ fastest reindeer.","the","Use the before a superlative.")],[
+A("m","","Choose the superlative of “big”.","One-syllable words like big double the last letter.","the biggest","the bigest","the most big","the more big"),
+A("m","","Choose the comparative of “beautiful”.","Long adjectives use more.","more beautiful","beautifuler","most beautiful","the beautiful"),
+A("m","","Choose the superlative of “large”.","Large ends in e, so we only add -st.","the largest","the largeest","the most large","the larger"),
+A("m","","Choose the comparative of “happy”.","Change y to i, then add -er.","happier","happyer","more happy","happiest"),
+A("m","","Which adjective needs more / the most?","Long adjectives like expensive use more and the most.","expensive","cold","hot","tall"),
+F("big → bigger → ____","the biggest|biggest","Double the g and add -est."),
+F("beautiful → ____ → the most beautiful","more beautiful","Comparative of a long adjective: more + adjective."),
+F("hot → hotter → the ____","hottest","Double the t and add -est."),
+F("The blue gift is ____ than the red gift. (heavy)","heavier","Heavy → heavier."),
+X("Match each adjective with its forms.","Each adjective follows its own pattern.","heavy|heavier – the heaviest","small|smaller – the smallest","expensive|more expensive – the most expensive","hot|hotter – the hottest"),
+X("Match each adjective with its spelling rule.","Spelling rules change the adjective before -er / -est.","large|add only -r / -st","big|double the last letter","happy|change y to i","beautiful|use more / most"),
+X("Match each comparative with its superlative.","Superlatives use the + -est or the most.","taller|the tallest","happier|the happiest","more beautiful|the most beautiful","bigger|the biggest"),
+A("e",tb("The red gift is more bigger than the blue gift."),"Choose the corrected sentence.","Do not use more with an -er adjective.","The red gift is bigger than the blue gift.","The red gift is more big than the blue gift.","The red gift is the bigger than the blue gift.","The red gift is biggest than the blue gift."),
+A("e",tb("This is the most tallest tree in the village."),"Choose the corrected sentence.","Tall is short: the tallest, not the most tallest.","This is the tallest tree in the village.","This is the more tall tree in the village.","This is tallest tree in the village.","This is the most tall tree in the village."),
+A("e",tb("Anna is happyer than Tom."),"Choose the corrected sentence.","Change y to i: happier.","Anna is happier than Tom.","Anna is more happier than Tom.","Anna is happiest than Tom.","Anna is the happier than Tom.")],[
+A("m",tb("Rudolph: 60 km/h · Dasher: 50 km/h · Comet: 40 km/h"),"Who is the fastest reindeer?","The highest speed gives the superlative: the fastest.","Rudolph","Dasher","Comet","They are the same"),
+A("m","","This is ____ Christmas ever!","Good → better → the best.","the best","the better","the most good","best"),
+A("m","","Yesterday’s weather was bad. Today’s is ____ than yesterday’s.","Bad → worse → the worst.","worse","worst","badder","more bad"),
+A("m","","Rudolph runs as fast ____ Dasher.","as + adjective + as shows that two things are equal.","as","than","the","more"),
+X("Match each adjective with its comparative.","These adjectives are irregular.","good|better","bad|worse","far|farther","many|more"),
+X("Match each adjective with its superlative.","Irregular superlatives must be learned.","good|the best","bad|the worst","far|the farthest","many|the most"),
+X("Match each picture with its sentence.","Read the pictures to choose the comparison.","🦌🐢|A reindeer is faster than a turtle.","🐘🐭|An elephant is bigger than a mouse.","🧊🔥|Ice is colder than fire.","🚀🚲|A rocket is faster than a bike."),
+U("u",tb("Dasher 60 km/h · Rudolph 50 km/h"),"Dasher is faster than Rudolph.","Comparative: subject + is + adjective-er + than."),
+U("u","","This is the tallest snowman.","Superlative: the + adjective-est."),
+U("u","","Today is the best Christmas day.","Best is the superlative of good."),
+U("u",tb("Red gift 5 kg · Blue gift 2 kg"),"The red gift is heavier than the blue gift.","Heavy changes y to i: heavier."),
+U("b",tb("🦌 Rudolph 70 km/h · 🦌 Dasher 55 km/h<br>Adjective: fast"),"Rudolph is faster than Dasher.","Compare two reindeer with faster than.","more","fastest"),
+U("b",tb("🎄 Adjective: beautiful"),"This is the most beautiful Christmas tree.","Long adjectives use the most.","more","beautifulest"),
+F("Rudolph is the ____ reindeer in the team. (fast)","fastest","Use the + -est for the top reindeer."),
+F("The North Pole is ____ than my town. (far)","farther|further","Far → farther / further.")],[
+A("m",tb("Gift A: $10 · Gift B: $25 · Gift C: $40"),"Which is the most expensive gift?","The highest price is the most expensive.","Gift C","Gift B","Gift A","Gift B and C"),
+A("m",tb("Rudolph: 60 km/h · Dasher: 50 km/h · Comet: 55 km/h"),"Which reindeer is faster than Comet?","Only Rudolph’s speed is higher than Comet’s.","Rudolph","Dasher","Comet","Rudolph and Dasher"),
+A("m",tb("Tree 1: 2 m · Tree 2: 3 m · Tree 3: 5 m"),"Choose the correct sentence.","Tree 2 is in the middle.","Tree 2 is taller than Tree 1 but shorter than Tree 3.","Tree 2 is the tallest tree.","Tree 2 is shorter than Tree 1.","Tree 3 is taller tree."),
+A("m","","Monday’s storm was bad. Tuesday’s was worse. Wednesday’s was the ____ of all.","Bad → worse → the worst.","worst","worse","baddest","most bad"),
+F("Santa’s sleigh is ____ than the elf’s cart. (fast)","faster","Short adjective: fast → faster than."),
+F("This is the ____ gift of all. (good)","best","Good → better → the best."),
+F("Our village is ____ beautiful than the city.","more","Use more before a long adjective in a comparison."),
+U("u","","This Christmas village is the most beautiful.","Superlative of beautiful: the most beautiful."),
+U("u",tb("Comet 55 km/h · Rudolph 60 km/h"),"Comet is slower than Rudolph.","Slow → slower than."),
+U("u",tb("Elf: 12 years · Santa: 90 years"),"The elf is younger than Santa.","Young → younger than."),
+X("Match each form with its use.","Each form has a different job.","taller than|comparing two things","the tallest|comparing three or more things","as tall as|showing equal height","more beautiful|comparative of a long adjective"),
+X("Match each comparative with its superlative.","Irregular forms must be learned.","better|the best","worse|the worst","farther|the farthest","more|the most"),
+A("e",tb("Rudolph is the more fast reindeer in the team."),"Choose the corrected sentence.","Fast is short, so use the fastest.","Rudolph is the fastest reindeer in the team.","Rudolph is the most fast reindeer in the team.","Rudolph is the faster reindeer in the team.","Rudolph is fastest reindeer in the team."),
+A("e",tb("This gift is more expensive that the blue one."),"Choose the corrected sentence.","Use than after a comparative.","This gift is more expensive than the blue one.","This gift is more expensive then the blue one.","This gift is the most expensive than the blue one.","This gift is expensiver than the blue one."),
+U("b",tb("Gift A: $5 · Gift B: $20 · Gift C: $50<br>Adjective: cheap"),"Gift A is the cheapest gift.","The lowest price: the cheapest.","most","cheaper")]];
+const types=i=>[...new Set(STAGES[i].map(q=>KN[q.k]))].join(", ");
+/* ---------- AUDIO ---------- */
+let AC,MG,mus=true,snd=true,vol=.6,ambT;
+function ac(){if(!AC){AC=new(window.AudioContext||window.webkitAudioContext)();MG=AC.createGain();MG.gain.value=vol;MG.connect(AC.destination)}if(AC.state==="suspended")AC.resume();return AC}
+function tone(f,t,d,ty,v,f2,m){try{if(m?!mus:!snd)return;const c=ac(),o=c.createOscillator(),g=c.createGain(),s=c.currentTime+t;o.type=ty||"sine";o.frequency.setValueAtTime(f,s);if(f2)o.frequency.exponentialRampToValueAtTime(f2,s+d);g.gain.setValueAtTime(0,s);g.gain.linearRampToValueAtTime(v||.15,s+.02);g.gain.exponentialRampToValueAtTime(.001,s+d);o.connect(g);g.connect(MG);o.start(s);o.stop(s+d+.05)}catch(e){}}
+function noise(t,d,v){try{if(!snd)return;const c=ac(),n=Math.floor(c.sampleRate*d),b=c.createBuffer(1,n,c.sampleRate),a=b.getChannelData(0);for(let i=0;i<n;i++)a[i]=(Math.random()*2-1)*(1-i/n);const s=c.createBufferSource(),f=c.createBiquadFilter(),g=c.createGain();f.type="bandpass";f.frequency.value=2500;g.gain.value=v;s.buffer=b;s.connect(f);f.connect(g);g.connect(MG);s.start(c.currentTime+t)}catch(e){}}
+const sfx={ok(){[523,659,784,1047].forEach((f,i)=>tone(f,i*.08,.4,"triangle",.18));[1319,1568,2093].forEach((f,i)=>tone(f,.35+i*.07,.3,"sine",.1));noise(.2,.4,.09);noise(.45,.9,.08)},bad(){tone(300,0,.25,"sawtooth",.05);tone(240,.15,.35,"sawtooth",.05)},tick(){tone(1200,0,.05,"square",.05)},tap(){tone(660,0,.08,"sine",.08)},unlock(){[392,523,659,784,1047].forEach((f,i)=>tone(f,i*.08,.3,"sine",.14))},win(){[523,659,784,659,784,1047].forEach((f,i)=>tone(f,i*.13,.4,"triangle",.18));noise(.4,1,.08)},fin(){[523,659,784,1047,784,1047,1319,1568].forEach((f,i)=>tone(f,i*.14,.5,"triangle",.18));noise(.3,2.2,.1)}};
+const MEL=[[659,2],[659,2],[659,4],[659,2],[659,2],[659,4],[659,2],[784,2],[523,3],[587,1],[659,8],[698,2],[698,2],[698,3],[698,1],[698,2],[659,2],[659,2],[659,1],[659,1],[784,2],[784,2],[698,2],[587,2],[523,8]].reduce((a,[f,l])=>a.concat([f],Array(l-1).fill(0)),[]);
+const CH=[131,131,131,131,175,131,196,131];
+function amb(){clearInterval(ambT);let n=0;ambT=setInterval(()=>{if(!mus||document.hidden||!AC)return;const L=MEL.length,s=n%L,m=MEL[s],up=(Math.floor(n/L)%2)?2:1,r=CH[s>>3];if(m){tone(m*up,0,.26,"triangle",.07,0,1);tone(m*up*1.5,0,.2,"sine",.025,0,1)}if(s%4===0)tone(s%8===0?r:r*1.5,0,.3,"sine",.1,0,1);if(s%4===2)tone(r*2,0,.12,"square",.025,0,1);tone(s%2?5200:4400,0,.04,"triangle",.025,0,1);if(s%16===15)tone(1568,0,.5,"sine",.05,0,1);n++},165)}
+function burst(e){for(let i=0;i<8;i++){const s=document.createElement("span");s.className="bs";s.textContent=e||"⭐";s.style.cssText="left:"+(15+Math.random()*70)+"vw;animation-delay:"+(i*.05)+"s";document.body.appendChild(s);setTimeout(()=>s.remove(),1500)}}
+/* ---------- STATE ---------- */
+let LS=null;try{LS=localStorage}catch(e){}
+let S=null;try{S=JSON.parse(LS.getItem("cx"))}catch(e){}
+let DB=null,USR=null,isT=false,unsub=null,cur=0,qi=0,QS=[],R,busy=0,tmr=null,TL=10,nt=null,mm,mi,sl,mo,chosen=[],pool=[],PS="";
+/* ---------- TIMER ---------- */
+function stopT(){clearInterval(tmr);tmr=null}
+function startT(){stopT();const end=Date.now()+TL*1000;let last=99;tmr=setInterval(()=>{const left=Math.max(0,end-Date.now()),b=$("#tb"),n=$("#tn");if(!b||!n){stopT();return}const sec=Math.ceil(left/1000);b.style.width=(left/TL/10)+"%";n.textContent=sec;b.className=left<3500?"low":"";if(left<3000&&sec!==last&&sec>0){last=sec;sfx.tick()}if(left<=0){stopT();timeUp()}},100)}
+function timeUp(){if(busy)return;done(false,true)}
+/* ---------- SCREENS ---------- */
+function welcome(){
+ app.innerHTML=`<div class="big">🎅</div><h1 class="center">WELCOME TO CHRISTMAS ADVENTURE!</h1><p class="center">Help Santa prepare the best Christmas celebration ever!</p><input class="ti" id="sn" maxlength="40" placeholder="Student Name" autocomplete="off" aria-label="Student Name"><input class="ti" id="sk" list="cl" maxlength="10" placeholder="Class / Room (for example M.3/1)" autocomplete="off" aria-label="Class or Room"><datalist id="cl"><option value="M.3/1"><option value="M.3/2"><option value="M.3/3"></datalist><input class="ti" id="sb" inputmode="numeric" maxlength="2" placeholder="Student Number" autocomplete="off" aria-label="Student Number"><p class="er" id="er" role="alert"></p><div class="row"><button class="btn" id="go0">START ADVENTURE</button><button class="btn alt" id="td" hidden>TEACHER DASHBOARD</button></div>`;
+ $("#td").hidden=!(isT&&DB);$("#td").onclick=dash;
+ $("#go0").onclick=()=>{const w=$("#sn").value.trim(),c=$("#sk").value.trim().toUpperCase(),n=$("#sb").value.trim();
+  if(!w||!c||!n){$("#er").textContent="Please fill in all 3 boxes.";return}
+  if(!/^\d{1,2}$/.test(n)||+n<1){$("#er").textContent="Student Number must be a number from 1 to 99.";return}
+  $("#go0").disabled=true;ac();S={who:w,cls:c,no:String(+n),sc:[null,null,null,null],res:[null,null,null,null],at:null};try{LS.setItem("cx",JSON.stringify(S))}catch(e){}sfx.tap();amb();rules()}}
+function rules(){
+ app.innerHTML=`<div class="big">📜</div><h1 class="center">HOW TO PLAY</h1><ol style="line-height:1.55;padding-left:22px"><li>Complete all 4 Christmas missions.</li><li>Each mission contains 15 questions.</li><li>There are 60 questions in total.</li><li>Choose the correct answer before time runs out.</li><li>Multiple-choice questions have 10 seconds.</li><li>Matching, sentence-building and choose-the-sentence questions have 15 seconds.</li><li>Earn 1 point for each correct answer.</li><li>Incorrect or unanswered questions receive 0 points.</li><li>Complete each mission to unlock the next one.</li><li>Try your best and become a Christmas Grammar Master!</li></ol><div class="row"><button class="btn" id="st">START GAME</button><button class="btn alt" id="bk">BACK</button></div>`;
+ $("#st").onclick=()=>{ac();amb();sfx.tap();menu()};$("#bk").onclick=welcome}
+function menu(){
+ stopT();const tot=S.sc.reduce((a,b)=>a+(b||0),0),all=S.sc.every(v=>v!=null);
+ app.innerHTML=`<div class="top"><span>🎅 ${esc(S.who)} · ${esc(S.cls)} · No. ${esc(S.no)}</span><span>⭐ ${tot}/60</span></div><h1>Choose your mission</h1>`+NAMES.map((n,i)=>{const dn=S.sc[i]!=null,un=i===0||S.sc[i-1]!=null;return `<button class="lv" data-i="${i}" ${un&&!dn?"":"disabled"}><span class="ic">${un?ICO[i]:"🔒"}</span><span><b>Stage ${i+1}: ${n}</b><small>${SUB[i]}<br>(${types(i)})</small></span><span class="st">${dn?S.sc[i]+"/15 ✅":un?"15 questions":""}</span></button>`}).join("")+`<div class="row">${all?'<button class="btn" id="fr">VIEW FINAL RESULT</button>':""}<button class="btn alt" id="chg">Change student</button></div>`;
+ app.querySelectorAll(".lv").forEach(b=>b.onclick=()=>{sfx.tap();play(+b.dataset.i)});
+ if(all)$("#fr").onclick=final;
+ $("#chg").onclick=()=>{if(confirm("Start again as a different student?")){try{LS.removeItem("cx")}catch(e){}S=null;welcome()}}}
+function play(i){cur=i;qi=0;R={c:0,w:0,t:0};QS=STAGES[i].slice();show()}
+function show(){
+ const q=QS[qi],k=q.k;busy=0;clearTimeout(nt);TL=("xub".includes(k)||/sentence/i.test(q.q))?15:10;
+ let h=`<div class="top"><span>${ICO[cur]} ${NAMES[cur]}</span><span>Q ${qi+1}/15 · ⭐ ${R.c}</span></div><div class="bar"><i style="width:${qi/15*100}%"></i></div><div class="tm"><i id="tb"></i><b id="tn">${TL}</b></div>${q.p?`<div class="pic">${q.p}</div>`:""}<div class="q">${q.q}</div>`;
+ if(k==="x")h+=`<div class="mt"><div id="ml"></div><div id="mr"></div></div>`;
+ else if(k==="f")h+=`<input class="ti" id="ti" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Your answer"><div class="row"><button class="btn" id="chk">Check answer</button></div>`;
+ else if(k==="u"||k==="b")h+=`<div class="chips ans" id="ans" aria-label="Your sentence"></div><div class="chips" id="pool"></div><div class="row"><button class="btn" id="chk">Check answer</button></div>`;
+ else{q.ix=q.fx?[0,1]:shuf(q.o.map((_,i)=>i));h+=q.ix.map(i=>`<button class="opt" data-i="${i}">${q.o[i]}</button>`).join("")}
+ h+=`<div id="fb" aria-live="polite"></div>`;app.innerHTML=h;startT();
+ if(k==="x"){mm=[];mi=0;sl=null;mo=shuf(q.m.map((_,i)=>i));drawM()}
+ else if(k==="f"){const ti=$("#ti");ti.focus();const ck=()=>{const v=ti.value.trim().toLowerCase().replace(/\s+/g," ");if(v)done(q.a.split("|").indexOf(v)>=0)};$("#chk").onclick=ck;ti.onkeydown=e=>{if(e.key==="Enter")ck()}}
+ else if(k==="u"||k==="b"){chosen=[];pool=shuf(q.s.replace(/[.?]$/,"").split(" ").concat(q.d||[]));drawU();$("#chk").onclick=()=>done(chosen.map(i=>pool[i]).join(" ")===q.s.replace(/[.?]$/,""))}
+ else app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{if(busy)return;const ok=+b.dataset.i===0;app.querySelectorAll(".opt").forEach(o=>{o.disabled=true;if(+o.dataset.i===0)o.classList.add("ok")});if(!ok)b.classList.add("bad");done(ok)})}
+function drawU(){
+ $("#ans").innerHTML=chosen.map(i=>`<button class="chip" data-r="${i}">${pool[i]}</button>`).join("");
+ $("#pool").innerHTML=pool.map((w,i)=>chosen.indexOf(i)>=0?"":`<button class="chip" data-a="${i}">${w}</button>`).join("");
+ app.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{if(busy)return;chosen.push(+b.dataset.a);sfx.tap();drawU()});
+ app.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{if(busy)return;chosen=chosen.filter(x=>x!==+b.dataset.r);drawU()})}
+function drawM(){
+ const q=QS[qi];
+ $("#ml").innerHTML=q.m.map((p,i)=>`<button class="chip ${mm.indexOf(i)>=0?"ok":sl===i?"sel":""}" data-l="${i}" ${mm.indexOf(i)>=0?"disabled":""}>${p[0]}</button>`).join("");
+ $("#mr").innerHTML=mo.map(i=>`<button class="chip ${mm.indexOf(i)>=0?"ok":""}" data-r="${i}" ${mm.indexOf(i)>=0?"disabled":""}>${q.m[i][1]}</button>`).join("");
+ app.querySelectorAll("[data-l]").forEach(b=>b.onclick=()=>{if(busy)return;sl=+b.dataset.l;sfx.tap();drawM()});
+ app.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{if(busy||sl===null)return;if(sl===+b.dataset.r){mm.push(sl);sl=null;sfx.tap();drawM();if(mm.length===q.m.length)done(mi===0)}else{mi++;sl=null;tone(300,0,.2,"sine",.1);drawM()}})}
+function done(ok,late){
+ if(busy)return;busy=1;stopT();const q=QS[qi];if(ok)R.c++;else if(late)R.t++;else R.w++;
+ app.querySelectorAll(".chip,.opt,.ti,#chk").forEach(b=>b.disabled=true);
+ if(late&&q.o)app.querySelectorAll(".opt").forEach(o=>{if(+o.dataset.i===0)o.classList.add("ok")});
+ if(ok){sfx.ok();burst("⭐")}else sfx.bad();
+ const ans=q.o?q.o[0]:q.k==="f"?q.a.split("|")[0]:q.k==="x"?"":q.s;
+ $("#fb").innerHTML=`<div class="fb ${ok?"ok":"bad"}"><b>${ok?pick(OKS)+" +1 point ⭐":late?"⏰ Time’s up! Keep trying!":pick(BADS)}</b>${ok||!ans?"":`<br>Correct answer: <b>${ans}</b>`}<br>${q.e}<button class="btn" id="nx">${qi<14?"Next question":"See results"}</button></div>`;
+ const nx=()=>{clearTimeout(nt);qi++;qi<15?show():result()};$("#nx").onclick=nx;if(late)nt=setTimeout(nx,3500)}
+function result(){
+ stopT();const last=cur===3;
+ if(S.sc[cur]==null){S.sc[cur]=R.c;S.res[cur]=[R.c,R.w,R.t];if(last)S.at=Date.now()}
+ const pct=Math.round(R.c/15*100),acc=R.c+R.w?Math.round(R.c/(R.c+R.w)*100):0;
+ app.innerHTML=`<div class="big">${last?"🏆":"🎁"}</div><h2 class="center">MISSION COMPLETED!</h2><p class="center">${NAMES[cur]}</p><p class="center">Great work! You earned ${R.c} out of 15 points!</p><div class="sum"><div><span>Correct Answers</span><b>${R.c}</b></div><div><span>Incorrect Answers</span><b>${R.w}</b></div><div><span>Time Out</span><b>${R.t}</b></div><div><span>Score Earned</span><b>${R.c}/15</b></div><div><span>Percentage</span><b>${pct}%</b></div><div><span>Accuracy</span><b>${acc}%</b></div></div><p class="center" id="sv">Saving…</p><div class="row"><button class="btn" id="go">${last?"SEE FINAL RESULT":"CONTINUE TO NEXT MISSION"}</button></div>`;
+ sfx[last?"fin":"win"]();burst("🎁");push();
+ $("#go").onclick=()=>{if(last)final();else{sfx.unlock();play(cur+1)}}}
+function final(){
+ const tot=S.sc.reduce((a,b)=>a+(b||0),0),sm=j=>S.res.reduce((a,r)=>a+(r?r[j]:0),0);
+ app.innerHTML=`<div class="big">🎅🧝🎁</div><h1 class="center">CONGRATULATIONS!</h1><h2 class="center">YOU ARE A CHRISTMAS GRAMMAR MASTER! 🏅</h2><div class="sum"><div><span>Student Name</span><b>${esc(S.who)}</b></div><div><span>Class / Room</span><b>${esc(S.cls)}</b></div><div><span>Student Number</span><b>${esc(S.no)}</b></div><div><span>Total Score</span><b>${tot} / 60</b></div><div><span>Percentage</span><b>${Math.round(tot/60*100)}%</b></div><div><span>Correct / Incorrect / Time Out</span><b>${sm(0)} / ${sm(1)} / ${sm(2)}</b></div><div><span>Completion Status</span><b>Completed</b></div></div><div class="sum">${NAMES.map((n,i)=>`<div><span>${i+1}. ${n}<br><small>(${types(i)})</small></span><b>${S.sc[i]}/15</b></div>`).join("")}<div><span><b>TOTAL SCORE</b><br><small>60 Questions</small></span><b>${tot}/60</b></div></div><p class="center" id="sv">${esc(PS)}</p><div class="row"><button class="btn alt" id="mp">Back to map</button></div>`;
+ sfx.fin();burst("🎆");setTimeout(()=>burst("🎁"),500);$("#mp").onclick=menu}
+/* ---------- SAVE ---------- */
+async function push(){
+ try{LS.setItem("cx",JSON.stringify(S))}catch(e){}
+ let m="⚠️ Score saved on this device only.";
+ if(DB&&USR){try{let h=0;for(const ch of (S.cls+"|"+S.no+"|"+S.who).toLowerCase())h=(h*31+ch.charCodeAt(0))|0;
+  const key="s"+(h>>>0).toString(36),ref=DB.doc("scores/"+await USR.id()),sn=await ref.get(),old=(sn.exists&&sn.data().students)||{},e=old[key]||{sc:[null,null,null,null],res:[null,null,null,null]};
+  const sc=e.sc.map((v,i)=>v!=null?v:S.sc[i]),res=e.res.map((v,i)=>v||S.res[i]),fin=sc.every(v=>v!=null);
+  old[key]={who:S.who,cls:S.cls,no:S.no,sc,res,fin,at:fin?(e.at||S.at||Date.now()):null,upd:Date.now()};await ref.set({students:old});m="✅ Your score was sent to your teacher."}catch(x){m="⚠️ Score could not be sent. Please tell your teacher."}}
+ PS=m;const el=$("#sv");if(el)el.textContent=m}
+/* ---------- TEACHER DASHBOARD ---------- */
+function dash(){
+ if(!DB)return;let rows=[],open={};
+ app.innerHTML=`<div class="top"><span>📋 TEACHER DASHBOARD</span><button class="btn alt" id="bk">Back</button></div><div class="sum" id="ov"></div><div class="dash" id="mo"></div><div class="row"><input class="ti sm" id="fq" placeholder="Search name" aria-label="Search name"><select class="ti sm" id="fc" aria-label="Filter by class"></select><select class="ti sm" id="fs" aria-label="Sort"><option value="no">Sort: student number</option><option value="hi">Sort: highest score</option><option value="lo">Sort: lowest score</option></select></div><div class="dash" id="dt"></div><div class="row"><button class="btn alt" id="rf">REFRESH DATA</button><button class="btn" id="csv">EXPORT CSV</button><button class="btn alt" id="pr">PRINT SCORE REPORT</button></div>`;
+ const tot=r=>r.sc.reduce((a,b)=>a+(b||0),0);
+ const vis=()=>{const q=$("#fq").value.trim().toLowerCase(),c=$("#fc").value,s=$("#fs").value;let v=rows.filter(r=>(!q||r.who.toLowerCase().indexOf(q)>=0)&&(!c||r.cls===c));
+  v.sort((a,b)=>s==="hi"?tot(b)-tot(a):s==="lo"?tot(a)-tot(b):a.cls.localeCompare(b.cls,undefined,{numeric:true})||a.no-b.no);return v};
+ const draw=()=>{const fc=$("#fc"),cv=fc.value,cl=[...new Set(rows.map(r=>r.cls))].sort();fc.innerHTML='<option value="">All classes</option>'+cl.map(c=>`<option ${c===cv?"selected":""}>${esc(c)}</option>`).join("");
+  const dn=rows.filter(r=>r.fin),ts=dn.map(tot);
+  $("#ov").innerHTML=[["Total Students",rows.length],["Students Completed",dn.length],["Students In Progress",rows.length-dn.length],["Class Average",ts.length?(ts.reduce((a,b)=>a+b,0)/ts.length).toFixed(1)+"/60":"-"],["Highest Score",ts.length?Math.max(...ts):"-"],["Lowest Score",ts.length?Math.min(...ts):"-"],["Total Questions",60]].map(x=>`<div><span>${x[0]}</span><b>${x[1]}</b></div>`).join("");
+  const vv=vis(),dd=vv.filter(r=>r.fin),tt=dd.map(tot),sm=a=>a.reduce((x,y)=>x+y,0);$("#mo").innerHTML=`<table><tr><th>Mission</th><th>Students played</th><th>Average</th><th>Highest</th><th>Lowest</th><th>Average %</th></tr>`+NAMES.map((n,i)=>{const a=vv.map(r=>r.sc[i]).filter(x=>x!=null),av=a.length?sm(a)/a.length:0;return `<tr><td>${i+1}. ${n}<br><small>(${types(i)})</small></td><td>${a.length}</td><td>${a.length?av.toFixed(1)+"/15":"-"}</td><td>${a.length?Math.max(...a):"-"}</td><td>${a.length?Math.min(...a):"-"}</td><td>${a.length?(av/15*100).toFixed(1)+"%":"-"}</td></tr>`}).join("")+`<tr><td><b>ALL 4 MISSIONS</b><br><small>60 Questions</small></td><td>${dd.length} completed</td><td>${tt.length?(sm(tt)/tt.length).toFixed(1)+"/60":"-"}</td><td>${tt.length?Math.max(...tt):"-"}</td><td>${tt.length?Math.min(...tt):"-"}</td><td>${tt.length?(sm(tt)/tt.length/60*100).toFixed(1)+"%":"-"}</td></tr></table>`;
+  const v=vis();$("#dt").innerHTML=`<table><tr><th>No.</th><th>Student Name</th><th>Class</th><th>Stage 1 /15</th><th>Stage 2 /15</th><th>Stage 3 /15</th><th>Stage 4 /15</th><th>Total /60</th><th>%</th><th>Status</th><th>Finished</th></tr>`+v.map(r=>`<tr data-k="${esc(r.k)}"><td>${esc(r.no)}</td><td>${esc(r.who)}</td><td>${esc(r.cls)}</td>${[0,1,2,3].map(i=>`<td>${r.sc[i]==null?"-":r.sc[i]}</td>`).join("")}<td><b>${tot(r)}</b></td><td>${(tot(r)/60*100).toFixed(1)}%</td><td>${r.fin?"Completed":"In Progress"}</td><td>${r.at?new Date(r.at).toLocaleString():"-"}</td></tr>${open[r.k]?`<tr><td colspan="11" style="text-align:left">${[0,1,2,3].map(i=>`Stage ${i+1}: ${r.res[i]?r.res[i][0]+" correct, "+r.res[i][1]+" incorrect, "+r.res[i][2]+" time out":"not played"}`).join(" · ")}</td></tr>`:""}`).join("")+`</table>`;
+  app.querySelectorAll("tr[data-k]").forEach(t=>t.onclick=()=>{open[t.dataset.k]=!open[t.dataset.k];draw()})};
+ const sub=()=>{if(unsub)unsub();unsub=DB.collection("scores").onSnapshot(s=>{rows=s.docs.reduce((a,d)=>a.concat(Object.entries(d.data().students||{}).map(([k,v])=>Object.assign({},v,{k:d.id+k}))),[]);draw()},()=>{$("#dt").textContent="Could not load scores."})};
+ ["fq","fc","fs"].forEach(i=>$("#"+i).oninput=draw);$("#rf").onclick=sub;$("#pr").onclick=()=>{try{window.print()}catch(e){}};
+ $("#bk").onclick=()=>{if(unsub)unsub();unsub=null;welcome()};
+ $("#csv").onclick=async()=>{try{const dl=await claude.use("downloads"),q=v=>'"'+String(v).replace(/"/g,'""')+'"',v=vis();
+  const t=["No,Name,Class,Stage 1,Stage 2,Stage 3,Stage 4,Total,Percentage,Status,Finished"].concat(v.map(r=>[r.no,q(r.who),q(r.cls)].concat(r.sc.map(x=>x==null?"":x),[tot(r),(tot(r)/60*100).toFixed(2)+"%",r.fin?"Completed":"In Progress",r.at?q(new Date(r.at).toLocaleString()):""]).join(","))).join("\n");
+  await dl.save({filename:"christmas-grammar-scores.csv",data:"\ufeff"+t})}catch(e){}};
+ sub()}
+/* ---------- INIT ---------- */
+for(let i=0;i<22;i++){const s=document.createElement("span");s.className="sn";s.textContent="❄";s.style.cssText="left:"+Math.random()*100+"vw;font-size:"+(10+Math.random()*16)+"px;animation-duration:"+(7+Math.random()*9)+"s;animation-delay:-"+Math.random()*12+"s";document.body.appendChild(s)}
+$("#bm").onclick=()=>{ac();mus=!mus;$("#bm").style.opacity=mus?1:.4;if(mus)amb()};
+$("#bs").onclick=()=>{ac();snd=!snd;$("#bs").textContent=snd?"🔊":"🔇"};
+$("#bv").oninput=e=>{vol=e.target.value/100;if(MG)MG.gain.value=vol};
+document.addEventListener("pointerdown",()=>{ac();if(!ambT)amb()},{once:true});
+if(S&&S.who&&S.sc)menu();else welcome();
+(async()=>{try{const u=await claude.use("user");USR=u;DB=await claude.use("db");isT=!!(u&&await u.canEdit());const b=$("#td");if(b)b.hidden=!(isT&&DB)}catch(e){}})();
+</script>
+</body>
+</html>
